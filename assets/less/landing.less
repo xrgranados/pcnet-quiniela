@@ -1,0 +1,140 @@
+// Mixins
+@import "template/mixins.less";
+// Utilities
+@import "template/utilities.less";
+// Variables
+@import "template/variables.less";
+
+@import url(fonts.css);
+@import url(bootstrap.css);
+@import url(font-awesome.min.css);
+
+::selection{
+	background: @base-gray;
+	color: #fff;
+	text-shadow: none;
+}
+
+body{
+	background-image: url(../img/quiniela_fondo.jpg);
+}
+
+#tt-qu{
+	font: 48px 'Comfortaa';
+	margin-top: 5px;
+	color: #fff;
+	.text-shadow(1px, 1px, 5px, @gray-darker);
+	& + p {
+		.text-shadow(1px, 1px, 5px, @gray-darker);
+		font: bold 2em 'Comfortaa';
+		margin: 0;
+		.text-shadow(2px, 2px, 3px, rgba(0,0,0,0.9));
+		& + small{
+			font-size: 1.2em;
+			.text-shadow(2px, 2px, 3px, rgba(0,0,0,0.9));
+		}
+	}
+}
+
+#flash-message{
+	display: none;
+}
+
+.head-cg .logo{
+	background-image: url(http://www.pcnetmedia.com/cursos/img/logoweb.png);
+	background-repeat: no-repeat;
+	display: inline-block;
+	.size(170px, 170px);
+	margin: 0 auto;
+	content: ' ';
+}
+
+.menu-land{
+	list-style: none;
+	padding: 10px 0;
+	li {
+		display: inline-block;
+		float: left;
+		padding: 5px 10px;
+		&:hover{
+			.border-right-radius(15px);
+			.border-left-radius(15px);
+			background: @base-gray;
+			color: @cg-color1;
+		}
+	}
+}
+
+.coming-soon{
+	color: #fff;
+	margin: 0 auto;
+	text-align: center;
+	height: 750px;
+}
+
+.inner-bg{
+	padding: 50px 0 40px 0;
+}
+
+.timer{
+	margin-top: 20px;
+}
+
+.timer .days-wrapper,
+.timer .hours-wrapper,
+.timer .minutes-wrapper,
+.timer .seconds-wrapper {
+	display: inline-block;
+	.size(160px,155px);
+	margin: 0 10px;
+	padding: 20px 0;
+	border: 1px solid #fff;
+	font-size: 18px;
+	cursor: pointer;
+	.transition(all .3s);
+}
+
+.timer .days-wrapper:hover,
+.timer .hours-wrapper:hover,
+.timer .minutes-wrapper:hover,
+.timer .seconds-wrapper:hover{
+	background: @base-gray;
+	border: 1px solid @link-color;
+	.transition(all .3s);
+}
+
+.timer .days,
+.timer .hours,
+.timer .minutes,
+.timer .seconds {
+	font-size: 80px;
+	font-weight: 100;
+	line-height: 90px;
+}
+
+#suscribe{
+	margin-top: 50px;
+	#email{
+		padding: 10px;
+		.border-left-radius(5px);
+		border: none;
+		color: @gray-darker;
+		height: 40px;
+	}
+	.btn{
+		height: 40px;
+		padding: 10px;
+		.border-right-radius(5px);
+		.border-left-radius(0px);
+	}
+}
+
+.trama {
+	background: url(../img/bg_tramado.png);
+	display: block;
+	.square(100%);
+	.opacity(.9);
+	position: fixed;
+	top: 0;
+	z-index: -100;
+}

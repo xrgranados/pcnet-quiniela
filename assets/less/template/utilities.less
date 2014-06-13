@@ -1,0 +1,52 @@
+// Generates the class .radius-(n), border-radius to apply to the element
+.generate-radius(5);
+.generate-radius(@n, @i: 1) when (@i =< @n) {
+	@name: (@i * 5);
+	.radius-@{name} {
+		.border-radius(@i * 5px);
+	}
+	.generate-radius(@n, (@i + 1));
+}
+.circle {
+	.border-radius(50%);
+}
+// Generates the class .height-(n), height to apply to the element
+.generate-heigth(10);
+.generate-heigth(@n, @i: 1) when (@i =< @n) {
+	@name: (@i * 10);
+	.height-@{name} {
+		height: (@i * 10px);
+	}
+	.generate-heigth(@n, (@i + 1));
+}
+
+.truncate-text {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.float_none {
+	float: none;
+}
+.absolute {
+	position: absolute;
+}
+.relative{
+	position: relative;
+}
+.no-display {
+	display: none;
+}
+.row{
+	margin-bottom: 25px;
+}
+
+// Generates the classes .KEY_COUNTRY, background flags to apply to the element
+.generate-flag(32);
+.generate-flag(@n, @i: 1) when (@i =< @n) {
+	@name-country: ~"@{country-@{i}}";
+	.@{name-country} {
+		.flag(@name-country);
+	}
+	.generate-flag(@n, (@i + 1));
+}

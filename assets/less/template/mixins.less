@@ -1,0 +1,43 @@
+
+@import "../bootstrap/mixins.less";
+@import "../bootstrap/utilities.less";
+
+// Mixins
+.border-radius(@radius) {
+	-webkit-border-radius: @radius;
+	   -moz-border-radius: @radius;
+	    -ms-border-radius: @radius;
+	     -o-border-radius: @radius;
+            border-radius: @radius;
+}
+
+.transform(@trans) {
+	transform: (@trans);
+	-o-transform: (@trans);
+	-ms-transform: (@trans);
+	-moz-transform: (@trans);
+	-webkit-transform: (@trans);
+}
+
+.transition(@transition) {
+	transition: (@transition);
+	-o-transition: (@transition);
+	-ms-transition: (@transition);
+	-moz-transition: (@transition);
+	-webkit-transition: (@transition);
+}
+
+.text-shadow(@h-shadow: 1px, @v-shadow: 1px, @blur: 5px, @color: rgba(0,0,0,.5)) {
+	text-shadow: @h-shadow @v-shadow @blur @color
+}
+
+.radius(@rad){
+	.border-radius(@rad);
+}
+
+.flag(@country){
+	background-image: url(~"../img/banderas/@{country}.png");
+	background-size: 80px;
+	background-position: center;
+	background-repeat: no-repeat;	
+}

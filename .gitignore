@@ -1,0 +1,30 @@
+.DS_Store
+
+application/cache/*
+!application/cache/index.html
+!application/cache/.htaccess
+
+application/logs/*
+!application/logs/index.html
+!application/logs/.htaccess
+
+application/config/database.php
+
+.htaccess
+
+# Idea #
+.idea/
+*.iml
+
+# Eclipse #
+.buildpath
+.settings/*
+
+# Aptana #
+.project
+# Sublime Text #
+*.sublime-workspace
+*.sublime-project
+
+# Stylus #
+.styl
